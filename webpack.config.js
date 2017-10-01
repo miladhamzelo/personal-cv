@@ -1,13 +1,9 @@
-/* Please note config is placed at root level as webpack-asset resolution is searched-for at the root level */
-
+const path = require('path');
+var devServerPort = require('./src/config/index.config.js').serverConfig.webpackDevServerPort;
 var webpack = require('webpack');
-var path = require('path');
-var ProgressPlugin = require('webpack/lib/ProgressPlugin');
 var WebpackIsomorphicToolsPlugin = require('webpack-isomorphic-tools/plugin')
 // note the different casing here for variables
 var webpackIsomorphicToolsPlugin = new WebpackIsomorphicToolsPlugin(require('./webpack/isomorphic.config'));
-var devServerPort = require('./src/config/index.config.js').serverConfig.webpackDevServerPort;
-
 
 module.exports = {
     entry: {
@@ -19,35 +15,15 @@ module.exports = {
     },
     output: {
         path: path.join(__dirname, 'dist'),
-        filename: 'bundle.js',
-        publicPath: 'http://localhost:' + devServerPort + '/dist/'
+        filename: 'app.bundle.js'
     },
     module: {
         loaders: [
-            {
-                test: /\.js[x]?$/,
-                include: path.resolve(__dirname, 'src'),
-                exclude: /node_modules/,
-                loader: 'babel-loader',
-                query: {
-                    "env": {
-                        "development": {
-                            "presets": ["react-hmre"]
-                        }
-                    }
-                }
-            },
-            {
-                test: webpackIsomorphicToolsPlugin.regular_expression('images'),
-                loader: 'url-loader?limit=10240'
-            },
-            {
-                test: /\.scss$/,
-                include: path.appSrc,
-                loaders: ["style", "css", "sass"]
-            }
+            { test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/ },
+            { test: /\.jsx$/, loader: 'babel-loader', exclude: /node_modules/ }
         ]
     },
+
     devtool: 'source-map',
     plugins: [
         new webpack.DefinePlugin({
@@ -55,13 +31,5 @@ module.exports = {
         }),
         webpackIsomorphicToolsPlugin.development(),
         new webpack.HotModuleReplacementPlugin(),
-        new ProgressPlugin(function (percentage, msg) {
-            if ((percentage * 100) % 20 === 0) {
-                console.info((percentage * 100) + '%', msg);
-            }
-        })
-    ],
-    resolve: {
-        extensions: ['', '.js', '.jsx']
-    }
-}
+    ]
+};

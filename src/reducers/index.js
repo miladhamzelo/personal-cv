@@ -1,6 +1,5 @@
 /* eslint arrow-body-style: 0*/
 
-import homepage from './homepage';
 
 const combineReducers = (reducers) => {
   return (state = {}, action) => {
@@ -18,7 +17,6 @@ const combineReducers = (reducers) => {
 };
 
 const rootReducer = combineReducers({
-  homepage,
 });
 
 export default rootReducer;

@@ -4,7 +4,7 @@ react/jsx-filename-extension : 0*/
 
 import React from 'react';
 import { Router, Route } from 'react-router';
-import ResumeContainer from '../containers/resume-container/ResumeContainer';
+import ResumeContainer from '../containers/resume/resumeContainer';
 
 export default function (history) {
   return (

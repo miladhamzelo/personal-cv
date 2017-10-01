@@ -1,6 +1,4 @@
-/* eslint global-require: 0 */
 require('babel-core/register');
-require('./data/startDb');
 
 const path = require('path');
 const webpackIsomorphicToolsConfig = require('../../webpack/isomorphic.config.js');

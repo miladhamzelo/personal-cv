@@ -1,7 +1,10 @@
 {
   "javascript": {
-    "main": "http://localhost:8080/dist/bundle.js"
+    "main": "app.bundle.js"
   },
   "styles": {},
-  "assets": {}
+  "assets": {},
+  "webpack": {
+    "version": "3.6.0"
+  }
 }
