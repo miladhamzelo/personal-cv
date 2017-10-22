@@ -1,4 +1,5 @@
 require('babel-core/register');
+require('source-map-support/register');
 
 const path = require('path');
 const webpackIsomorphicToolsConfig = require('../../webpack/isomorphic.config.js');

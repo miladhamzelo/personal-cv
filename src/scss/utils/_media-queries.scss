@@ -1,0 +1,13 @@
+@import "./abstracts/_variables";
+
+@mixin mobile {
+    @media only screen and (min-width: 0px) and (max-width: #{$mobile_width_breakpoint -1px}) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media only screen and (min-width: #{$mobile_width_breakpoint}) {
+        @content;
+    }
+}

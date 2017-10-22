@@ -1,10 +1,8 @@
-import ResumePageContainer from '../../containers/resume/resumeContainer';
+import LandingPageContainer from '../../containers/landing-page/landingPageContainer';
 
 export const routes = [
-
     {
         path: '/',
-        component: ResumePageContainer,
-        loadData: () => { return null }
+        component: LandingPageContainer,
     }
-]
+];

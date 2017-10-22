@@ -1,6 +1,5 @@
 import fetch from 'isomorphic-fetch';
 import { Promise } from 'bluebird';
-import { endpoints } from '../config/index.config';
 
 export function getData(path) {
   const url = formUrl(path); // eslint-disable-line no-use-before-define
@@ -34,5 +33,5 @@ export function sendData(path, data) {
 }
 
 function formUrl(path) {
-  return process.env.NODE_ENV === 'development' ? `${endpoints.debug}${path}` : `${endpoints.prod}${path}`;
+  return `http://${path}`;
 }

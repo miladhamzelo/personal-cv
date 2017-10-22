@@ -3,7 +3,11 @@ import http from 'http';
 import express from 'express';
 import httpProxy from 'http-proxy';
 import compression from 'compression';
-import bodyParser from 'body-parser';
+
+const webpack = require('webpack');
+const config = require('../../webpack.config');
+
+const compiler = webpack(config);
 
 const app = express();
 const proxy = httpProxy.createProxyServer();
@@ -11,7 +15,6 @@ const server = new http.Server(app);
 
 app.use(compression());
 
-app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, '../..', 'dist')));
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -24,6 +27,12 @@ if (__DEVELOPMENT__) { // eslint-disable-line no-undef
         });
     });
 }
+
+app.use(require('webpack-hot-middleware')(compiler, {
+  log: console.log,
+  path: '/__webpack_hmr',
+  heartbeat: 10 * 1000
+}));
 
 const setRoutes = (routes) => {
     routes.forEach(route => {
@@ -44,5 +53,3 @@ server.listen('3000', (err) => {
 });
 
 export default app;
-
-

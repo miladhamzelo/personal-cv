@@ -1,8 +1,28 @@
+import { Provider } from 'react-redux';
+import { BrowserRouter as Router } from 'react-router-dom';
+import createBrowserHistory from 'history/createBrowserHistory';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import MainComponent from './components/main/MainComponent';
+import configureStore from './store/configureStore';
+import createRoutes from './routes/index';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
-ReactDOM.hydrate(
- <MainComponent name="Goodness kayode" />,
- document.getElementById('main')
- );
+let state = {};
+
+if (window.__REDUX_STATE__) {
+  try {
+    state = JSON.parse(unescape(__REDUX_STATE__));
+  } catch (e) {
+    console.log('error');
+  }
+}
+
+const store = configureStore(state);
+ReactDOM.hydrate((
+  <MuiThemeProvider>
+    <Provider store={store}>
+      <Router>
+        {createRoutes(createBrowserHistory())}
+      </Router>
+    </Provider>
+  </MuiThemeProvider>), document.getElementById('main'));
