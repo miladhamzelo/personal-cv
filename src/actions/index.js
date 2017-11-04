@@ -1,5 +1,5 @@
 
-import * as types from '../constants/action-types/ActionTypes';
+import * as types from '../constants/action-types/actionTypes';
 
 /*export function setFromAmount(index, amount) {
   const newAmount = inputUtils.formatValue(amount.target.value);

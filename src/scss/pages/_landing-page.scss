@@ -1,0 +1,20 @@
+@import "./abstracts/_mixins";
+@import "./abstracts/_variables";
+
+
+.city-backdrop {
+    @include background(#{map-get($image_urls, mainpageBackground)});
+}
+
+
+.page-wrapper {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.go-to-resume-button-wrapper {
+     :hover {
+        color: red;
+    }
+}

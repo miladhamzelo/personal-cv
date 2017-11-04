@@ -6,10 +6,14 @@ import LandingPageComponent from '../../components/landing-page/landingPageCompo
 
 class LandingPageContainer extends Component {
 
+    _redirectToResume() {
+        this.props.history.push("/resume");
+    }
+
     render() {
 
         return (
-                <LandingPageComponent />
+            <LandingPageComponent history={this.props.history} onClick={this._redirectToResume} />
         );
     }
 }

@@ -1,11 +1,15 @@
 import React from 'react';
-import { Router, Route } from 'react-router';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import LandingPageContainer from '../containers/landing-page/landingPageContainer';
+import ResumeContainer from '../containers/resume/resumeContainer';
 
 export default function (history) {
   return (
-    <Router history={history}>
-      <Route path="/" component={LandingPageContainer} />
-    </Router>
+    <BrowserRouter>
+      <Switch>
+        <Route exact path="/" component={LandingPageContainer} />
+        <Route path="/resume" component={ResumeContainer} />
+      </Switch>
+    </BrowserRouter>
   );
 }

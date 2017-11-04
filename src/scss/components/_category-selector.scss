@@ -1,0 +1,49 @@
+@import '../layout/hacks';
+@import '../abstracts/_mixins';
+.category-selector-widget-wrapper {
+    display: block;
+    padding: 0;
+    width: 200px;
+    height: 200px;
+    border: 1px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.circle-quarter {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    width: 100px;
+    height: 100px;
+}
+
+.circle-quarter-1 {
+    @extend .circle-quarter;
+    background-color: green;
+}
+
+.circle-quarter-2 {
+    @extend .circle-quarter;
+    background-color: #0f0;
+}
+
+.circle-quarter-3 {
+    @extend .circle-quarter;
+    background-color: #00f;
+}
+
+.circle-quarter-4 {
+    @extend .circle-quarter;
+    background-color: #0ff;
+}
+
+//category item
+.category-item-wrapper {
+    text-align: center;
+    @include position-element-from-top(relative, 50%);
+}
+
+.bottom-element {
+    top: 25% !important
+}

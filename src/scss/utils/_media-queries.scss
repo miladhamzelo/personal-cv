@@ -1,13 +1,25 @@
 @import "./abstracts/_variables";
 
 @mixin mobile {
-    @media only screen and (min-width: 0px) and (max-width: #{$mobile_width_breakpoint -1px}) {
+    @media only screen and (min-width: 0px) and (max-width: map-get($width-breakpoints, mobile)) {
         @content;
     }
 }
 
-@mixin desktop {
-    @media only screen and (min-width: #{$mobile_width_breakpoint}) {
+@mixin tablet {
+    @media only screen and (min-width: #{1px + map-get($width-breakpoints, mobile)}) and (max-width: map-get($width-breakpoints, tablet)) {
+        @content;
+    }
+}
+
+@mixin small-desktop {
+    @media only screen and (min-width: #{1px + map-get($width-breakpoints, tablet)}) and (max-width: map-get($width-breakpoints, small-desktop)){
+        @content;
+    }
+}
+
+@mixin large-desktop {
+    @media only screen and (min-width: #{1px + map-get($width-breakpoints, small-desktop)}) and (max-width: map-get($width-breakpoints, large-desktop)){
         @content;
     }
 }

@@ -1,0 +1,14 @@
+@import "./utils/_media-queries";
+
+.background-wrapper {
+    height: 768px;
+    @include mobile {
+        width: calc(#{map-get($width-breakpoints, mobile)} -100px);
+    }
+    @include tablet {
+        width: calc(#{map-get($width-breakpoints, tablet)} -100px);
+    }
+    @include small-desktop {
+        width: calc(#{map-get($width-breakpoints, small-desktop)} -100px);
+    }
+}
