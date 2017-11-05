@@ -1,3 +1,3 @@
 
-// export const SET_FROM_AMOUNT = 'SET_FROM_AMOUNT';
+ export const SET_SELECTED_CATEGORY = 'SET_SELECTED_CATEGORY';
 

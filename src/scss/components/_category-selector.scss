@@ -8,34 +8,77 @@
     border: 1px;
     border-radius: 50%;
     overflow: hidden;
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1);
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1);
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1);
+    transition: all 200ms ease-in;
+    transform: scale(1);
+}
+
+.category-selector-widget-wrapper:hover {
+    box-shadow: 0px 0px 150px #000000;
+    z-index: 2;
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1.5);
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1.5);
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1.5);
+    transition: all 200ms ease-in;
+    transform: scale(1.5);
 }
 
 .circle-quarter {
+    position: relative;
     display: inline-block;
     margin: 0;
     padding: 0;
     width: 100px;
     height: 100px;
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1);
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1);
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1);
+    transition: all 200ms ease-in;
+    transform: scale(1);
+}
+
+.circle-quarter:hover {
+    box-shadow: 0px 0px 150px #000000;
+    z-index: 999;
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1.5);
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1.5);
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1.5);
+    transition: all 200ms ease-in;
+    transform: scale(1.5);
 }
 
 .circle-quarter-1 {
     @extend .circle-quarter;
-    background-color: green;
+    @include linear-gradient($cv_light_green, $cv_dark_green);
 }
 
 .circle-quarter-2 {
     @extend .circle-quarter;
-    background-color: #0f0;
+    @include linear-gradient($cv_light_yellow, $cv_dark_yellow);
 }
 
 .circle-quarter-3 {
     @extend .circle-quarter;
-    background-color: #00f;
+    @include linear-gradient($cv_light_blue, $cv_dark_blue);
 }
 
 .circle-quarter-4 {
     @extend .circle-quarter;
-    background-color: #0ff;
+    @include linear-gradient($cv_light_red, $cv_dark_red);
 }
 
 //category item

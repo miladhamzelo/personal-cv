@@ -1,7 +1,8 @@
+@import './_colors';
+
 $mobile_width_breakpoint: 740px;
 
 $image_urls: (mainpageBackground: '../../assets/images/night-toronto.jpg');
 
 $width-breakpoints: (mobile: 768px, tablet: 1024px, small-desktop: 1280px, large-desktop: 2100px);
 
-$gradient_colors: (to: lightblue, from: blue);

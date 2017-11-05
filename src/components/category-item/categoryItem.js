@@ -1,4 +1,5 @@
 import React from 'react'
+import SvgIcon from 'material-ui/SvgIcon';
 
 const categoryItem = (props) => {
     const classNames = ['category-item-wrapper'];
@@ -6,8 +7,8 @@ const categoryItem = (props) => {
         classNames.push('bottom-element');
     }
     return (
-        <div className={classNames.join(' ')}>shane</div>
-            )
+        <div className={classNames.join(' ')}><props.icon/></div>
+            );
 
 };
 

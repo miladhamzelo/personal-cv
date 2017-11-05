@@ -8,8 +8,8 @@ const CategorySelectorComponent = (props) => {
         for (let i = 0; i < props.itemCount; i++) {
             const num = i + 1;
             const className = `circle-quarter-${num}`;
-            const item = num <= 2 ? <div className={className}> <CategoryItem key={i} bottomItem={false} /></div> :
-                <div className={className}> <CategoryItem key={i} bottomItem={true} /></div>;
+            const item = num <= 2 ? <div className={className}> <CategoryItem key={i} icon={props.displayIcons[i]} bottomItem={false} /></div> :
+                <div className={className}> <CategoryItem key={i} icon={props.displayIcons[i]} bottomItem={true} /></div>;  
             items.push(item);
         }
         return items;

@@ -1,5 +1,5 @@
 @import "./abstracts/_mixins";
 @import "./abstracts/_variables";
 .resume-backdrop {
-    @include linear-gradient(map-get($gradient_colors, to), map-get($gradient_colors, from));
+    @include linear-gradient($cv_light_indigo, $cv_dark_indigo);
 }
