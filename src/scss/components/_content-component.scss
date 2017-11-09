@@ -1,0 +1,8 @@
+@import '../abstracts/_mixins';
+@import '../abstracts/_variables';
+
+.content-component-wrapper {
+    height:300px;
+    width: 300px;
+    @include linear-gradient($cv_light_bluegrey, $cv_dark_bluegrey);
+}
