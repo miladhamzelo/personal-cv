@@ -1,6 +1,3 @@
 @import './_colors';
-
-$image_urls: (mainpageBackground: '../../assets/images/night-toronto.jpg');
-
+$image_urls: ( mainpageBackground: '../../assets/images/night-toronto.jpg', exp-safeway: '../../assets/images/safeway.png', exp-gnx: '../../assets/images/greennexxus.png');
 $width-breakpoints: (mobile: 768px, tablet: 1024px, small-desktop: 1280px, large-desktop: 2100px);
-

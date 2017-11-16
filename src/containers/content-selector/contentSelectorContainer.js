@@ -11,7 +11,7 @@ export default class ContentSelectorContainer extends Component {
         const Component = this._getSelectedComponent();
 
         return (
-             <Component />
+             <Component props={this.props}/>
         )
     }
 }

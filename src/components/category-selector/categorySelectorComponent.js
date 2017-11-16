@@ -19,7 +19,7 @@ const CategorySelectorComponent = (props) => {
 
     return (
 
-        <div className="category-selector-widget-wrapper position-element-middle-abs">
+        <div className="category-selector-widget-wrapper position-horizontal-centered">
             {items}
         </div>
     );

@@ -1,8 +1,21 @@
 @import '../abstracts/_mixins';
 @import '../abstracts/_variables';
+svg {
+    position: relative;
+    top: 0;
+    left: 0;
+}
 
 .content-component-wrapper {
-    height:300px;
-    width: 300px;
+    height: 700px;
+    width: 700px;
     @include linear-gradient($cv_light_bluegrey, $cv_dark_bluegrey);
+    margin: 0 auto;
+    border-radius: 25px;
+}
+
+.exit-to-main-container {
+    svg {
+        margin-left: -100px;
+    }
 }

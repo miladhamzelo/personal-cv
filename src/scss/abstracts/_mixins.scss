@@ -9,19 +9,19 @@
 }
 
 @mixin background($image: null) {
+    height: 100%;
     -webkit-background-size: contain;
     -moz-background-size: contain;
     -o-background-size: contain;
     background-size: contain;
     background-repeat: no-repeat;
-    background-position:center;
-
+    background-position: center;
     @if $image {
         background-image: url($image);
     }
 }
 
-@mixin position-element-from-top($position, $percent){
+@mixin position-element-from-top($position, $percent) {
     position: $position;
     top: $percent;
 }

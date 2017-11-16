@@ -1,18 +1,15 @@
+.position-vertical-centered {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .position-horizontal-centered {
     margin: 0 auto;
 }
 
-.position-element-vertical-centered{
-    top: 50%;
-    right: 50%;
-}
-
 .position-element-middle-abs {
     position: absolute;
-   @extend .position-element-vertical-centered;
-}
-
-.position-element-middle-rel{
-    position: relative;
-    @extend .position-element-vertical-centered;
+    top: 50%;
+    right: 50%;
 }

@@ -6,11 +6,11 @@ import { Provider } from 'react-redux';
 import React from 'react';
 import { routes } from '../../config/index';
 import configureStore from '../../../store/configureStore';
-import { initialCalculationState } from '../../../constants/initial-state/initialState';
+import { initialState } from '../../../constants/initial-state/initialState';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
-const store = configureStore(initialCalculationState);
-const reduxState = serialize(initialCalculationState);
+const store = configureStore(initialState);
+const reduxState = serialize(initialState);
 
 export default function (app) {
   app.get('*', (req, res) => {

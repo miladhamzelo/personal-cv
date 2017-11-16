@@ -6,11 +6,11 @@ const ResumeComponent = (props) => {
 
     const content = (() => {
         return !props.selectedKey ? <CategorySelector categories={props.categories} actions={props.actions} /> :
-            <ContentContainer actions={props.actions} displayKey={props.selectedKey} />;
+            <ContentContainer actions={props.actions} displayKey={props.selectedKey} experience={props.experience} showExperience={props.showExperience} selectedSlide={props.selectedSlide} />;
     })();
 
     return (
-        <div className="background-wrapper resume-backdrop">
+        <div className="resume-backdrop position-vertical-centered">
             {content}
         </div>
     );

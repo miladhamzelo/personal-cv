@@ -5,3 +5,13 @@
 @import './components/_category-selector';
 @import './components/_content-component';
 @import './components/_experience-component';
+@import './components/_category-selector';
+@import './components/_content-switcher';
+@import './components/_skills-list';  
+@import './components/_map-marker';
+@import './components/_work-details';
+
+html, body, .app-container {
+    height: 100%;
+    overflow:hidden;
+}

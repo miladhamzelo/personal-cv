@@ -1,8 +1,113 @@
 @import '../abstracts/_mixins';
 @import '../abstracts/_variables';
+@import '../abstracts/_colors';
+@import '../layout/_hacks';
 
-.experience-component-wrapper {
-    height:200px;
-    width: 200px;
-    @include linear-gradient($cv_light_grey, $cv_dark_grey);
+.experience-component-container {
+    @extend .position-horizontal-centered;
+    height: 600px;
+    width: 600px;
+    background-color: white;
+    border-radius: 25px;
+}
+
+.association-header-container {
+    @extend .position-vertical-centered;
+    top: 5%;
+    position: relative;
+    border-radius: 75px;
+    border: 1px solid $cv_light_grey;
+    height: 125px;
+    width: 125px;
+    padding: 5px;
+}
+
+.association-header {
+    height: 100px;
+    width: 100px;
+    border-radius: 25px;
+    @extend .position-horizontal-centered;
+}
+
+.safeway-img{
+    @include background(#{map-get($image_urls, exp-safeway)});
+}
+
+.gnx-img{
+    @include background(#{map-get($image_urls, exp-gnx)});
+}
+
+.header-container {
+    padding: 10px;
+    top: 2%;
+    position: relative;
+    @extend .position-horizontal-centered;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 300px;
+    height: 200px;
+    border: 1px solid lightgrey;
+    border-radius: 25px;
+}
+
+.minor-gap {
+    width: 10px;
+}
+
+.association-info-container {
+    @extend .position-horizontal-centered;
+    @extend .position-vertical-centered;
+    text-align: center;
+    height: 100px;
+    .org-name {
+        margin-top: 5px;
+        height: 25px;
+        font-size: 1rem;
+        font-weight: semi-bold;
+    }
+    .date-worked {
+        font-size: 0.675rem;
+    }
+    .job-info-container {
+        margin-top: 5px;
+        font-size: 0.675rem;
+        margin-top: 10px;
+    }
+    .role-container {
+        margin-top: 5px;
+        font-size: 0.675rem;
+    }
+}
+
+.work-history-container {
+    margin-top: 5%;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.tech-list-container {
+    width: 30%;
+    float: left;
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+    margin-left: 2%;
+}
+
+.work-information-container {
+    display: flex;
+    flex-direction: column;
+    margin-right: 2%;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid lightgrey;
+    width: 60%;
+    height: 250px;
+}
+
+.map-container {
+    height: 100%;
+    border: 1px solid lightgrey;
 }
