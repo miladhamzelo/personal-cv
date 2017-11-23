@@ -1,3 +1,19 @@
+.container-gap {
+    position: relative;
+    top: 15%;
+}
+
 .work-details-container {
     margin: 0 auto;
+}
+
+.work-details-header {
+    text-align: center;
+    @extend .container-gap;
+}
+
+.work-details {
+    text-align: left !important;
+    margin-left: 50px;
+    @extend .container-gap;
 }

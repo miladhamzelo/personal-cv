@@ -2,7 +2,6 @@
 @import '../abstracts/_variables';
 @import '../abstracts/_colors';
 @import '../layout/_hacks';
-
 .experience-component-container {
     @extend .position-horizontal-centered;
     height: 600px;
@@ -29,12 +28,28 @@
     @extend .position-horizontal-centered;
 }
 
-.safeway-img{
+.safeway-img {
     @include background(#{map-get($image_urls, exp-safeway)});
 }
 
-.gnx-img{
+.gnx-img {
     @include background(#{map-get($image_urls, exp-gnx)});
+}
+
+.ntt-img {
+    @include background(#{map-get($image_urls, exp-ntt)});
+}
+
+.inf-img {
+    @include background(#{map-get($image_urls, exp-inf)});
+}
+
+.cap-img {
+    @include background(#{map-get($image_urls, exp-cap)});
+}
+
+.hdc-img {
+    @include background(#{map-get($image_urls, exp-hdc)});
 }
 
 .header-container {

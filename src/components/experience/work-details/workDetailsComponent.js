@@ -14,7 +14,8 @@ const WorkDetailsComponent = () => {
 
     return (
         <div className="work-details-container"><Paper style={style} zDepth={5} rounded={false}>
-        You a dork !!
+        <h1 className="work-details-header"> Position Information: </h1>
+        <p class="work-details"> You a dork You a dork  You a dork</p>
         </Paper>
         </div>
     )
