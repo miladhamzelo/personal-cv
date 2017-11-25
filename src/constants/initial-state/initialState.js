@@ -3,8 +3,8 @@ export const initialState = {
   selectedTile: 0,
   categories: [
     {
-      title: 'About Me',
-      key: 'aboutMe',
+      title: 'Contact Me',
+      key: 'contactMe',
       selected: false,
       iconIndex: 1
     },
@@ -34,10 +34,10 @@ export const initialState = {
       key: 'gnx',
       company: 'GreenNexxus',
       title: 'Fullstack ASP.NET developer',
-      location: {
+      location: [{
         lat: 45.9607044,
         lng: -66.6415046
-      },
+      }],
       center: {
         lat: 45.9636,
         lng: -66.6431
@@ -51,13 +51,14 @@ export const initialState = {
       key: 'sfw',
       company: 'Safeway',
       title: 'Fullstack ASP.NET developer',
-      location: {
+      location: [{
         lat: 51.111412,
         lng: -114.039921
-      },
+      }
+      ],
       center: {
-        lat: 51.0486,
-        lng: -114.0708
+        lat: 51.1,
+        lng: -114.0
       },
       date: {
         start: '10/01/2014',
@@ -67,11 +68,11 @@ export const initialState = {
     {
       key: 'ntt',
       company: 'NTT Data',
-      title: 'Java 6 : Spring MVC Developer',
-      location: {
+      title: 'Java Developer',
+      location: [{
         lat: 44.6508,
         lng: -63.5771
-      },
+      }],
       center: {
         lat: 44.6488,
         lng: -63.5752
@@ -85,13 +86,14 @@ export const initialState = {
       key: 'inf',
       company: 'Infusion',
       title: 'Front End Consultant',
-      location: {
-        lat: 43.6471382,
-        lng: -79.38270360000001
-      },
+      location: [{
+        lat: 41.1729996,
+        lng: -73.36395519999996
+      }],
       center: {
-        lat: 43.6532,
-        lng: -79.3832
+        lat: 41.141472,
+        lng: -73.3579049
+
       },
       date: {
         start: '01/01/2016',
@@ -102,10 +104,10 @@ export const initialState = {
       key: 'cap',
       company: 'Capco',
       title: 'Front End Consultant',
-      location: {
+      location: [{
         lat: 43.649722,
         lng: -79.376207
-      },
+      }],
       center: {
         lat: 43.6532,
         lng: -79.3832
@@ -119,13 +121,13 @@ export const initialState = {
       key: 'hdc',
       company: 'Home Depot Canada',
       title: 'Sr Front End Developer',
-      location: {
+      location: [{
         lat: 43.728811,
         lng: -79.329219
-      },
+      }],
       center: {
-        lat: 43.7615,
-        lng: -79.4111
+        lat: 43.75,
+        lng: -79.32
       },
       date: {
         start: '11/01/2017',

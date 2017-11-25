@@ -7,14 +7,15 @@ import ContentSwitcher from '../content-switcher/contentSwitcher';
 const ContentComponent = (props) => {
 
     const exitButton = (() => {
+
         return !props.showExperience ? <div className="exit-to-main-container"><IconButton onClick={props.actions.clearCategories}><ActionExitToApp /></IconButton></div> :
-            <IconButton onClick={props.actions.showExperiencePaper}><ActionExitToApp /></IconButton>
+            <div className="exit-to-main-container"><IconButton onClick={props.actions.showExperiencePaper}><ActionExitToApp /></IconButton></div>
     })();
 
     return (
         <div className="content-component-wrapper">
-            <ContentSwitcher showContent={!props.showExperience} next={props.actions.goToNextSlide} prev={props.actions.goToPrevSlide} />
             {exitButton}
+            <ContentSwitcher showSwitcher={props.showContentSwitcher} next={props.actions.goToNextSlide} prev={props.actions.goToPrevSlide} />
             <ContentSelectorContainer
                 showExperience={props.showExperience}
                 experience={props.experience}

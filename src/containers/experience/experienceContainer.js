@@ -5,7 +5,8 @@ import WorkDetailsComponent from '../../components/experience/work-details/workD
 export default class ExperienceContainer extends Component {
 
     _renderComponent() {
-        return this.props.props.showExperience ? <WorkDetailsComponent /> :
+        const selectedJob = this.props.props.experience[this.props.props.selectedSlide];
+        return this.props.props.showExperience ? <WorkDetailsComponent jobKey={selectedJob.key} jobTitle={selectedJob.company} /> :
             <ExperienceComponent actions={this.props.props.actions} experience={this.props.props.experience} selectedSlide={this.props.props.selectedSlide} />
 
     }

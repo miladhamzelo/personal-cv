@@ -2,20 +2,15 @@
 @import '../abstracts/_variables';
 @import '../abstracts/_colors';
 @import '../layout/_hacks';
+@import '../layout/_content';
 .experience-component-container {
-    @extend .position-horizontal-centered;
-    height: 600px;
-    width: 600px;
-    background-color: white;
-    border-radius: 25px;
+    @extend .content-float-container;
 }
 
 .association-header-container {
     @extend .position-vertical-centered;
     top: 5%;
     position: relative;
-    border-radius: 75px;
-    border: 1px solid $cv_light_grey;
     height: 125px;
     width: 125px;
     padding: 5px;
@@ -24,31 +19,40 @@
 .association-header {
     height: 100px;
     width: 100px;
-    border-radius: 25px;
     @extend .position-horizontal-centered;
 }
 
+.circle-picture {
+    border-radius: 50px;
+}
+
 .safeway-img {
+    @extend .circle-picture;
     @include background(#{map-get($image_urls, exp-safeway)});
 }
 
 .gnx-img {
+    @extend .circle-picture;
     @include background(#{map-get($image_urls, exp-gnx)});
 }
 
 .ntt-img {
+    @extend .circle-picture;
     @include background(#{map-get($image_urls, exp-ntt)});
 }
 
 .inf-img {
+    @extend .circle-picture;
     @include background(#{map-get($image_urls, exp-inf)});
 }
 
 .cap-img {
+    @extend .circle-picture;
     @include background(#{map-get($image_urls, exp-cap)});
 }
 
 .hdc-img {
+    @extend .circle-picture;
     @include background(#{map-get($image_urls, exp-hdc)});
 }
 
@@ -63,7 +67,7 @@
     justify-content: space-between;
     width: 300px;
     height: 200px;
-    border: 1px solid lightgrey;
+    @extend .light_grey_border;
     border-radius: 25px;
 }
 
@@ -77,8 +81,7 @@
     text-align: center;
     height: 100px;
     .org-name {
-        margin-top: 5px;
-        height: 25px;
+        height: 35px!important;
         font-size: 1rem;
         font-weight: semi-bold;
     }
@@ -86,14 +89,19 @@
         font-size: 0.675rem;
     }
     .job-info-container {
-        margin-top: 5px;
+        @extend .scale-item;
         font-size: 0.675rem;
-        margin-top: 10px;
+    }
+    .job-info-container:hover {
+        @extend .scale-item:hover;
     }
     .role-container {
-        margin-top: 5px;
         font-size: 0.675rem;
     }
+}
+
+.association-info-container>span {
+    height: 25px;
 }
 
 .work-history-container {
@@ -106,7 +114,7 @@
 .tech-list-container {
     width: 30%;
     float: left;
-    border: 1px solid lightgrey;
+    @extend .light_grey_border;
     border-radius: 10px;
     margin-left: 2%;
 }
@@ -117,12 +125,12 @@
     margin-right: 2%;
     border-radius: 10px;
     text-align: center;
-    border: 1px solid lightgrey;
+    @extend .light_grey_border;
     width: 60%;
     height: 250px;
 }
 
 .map-container {
     height: 100%;
-    border: 1px solid lightgrey;
+    @extend .light_grey_border;
 }

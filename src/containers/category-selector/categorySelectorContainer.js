@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import CategorySelectorComponent from '../../Components/category-selector/categorySelectorComponent';
+import CategorySelectorComponent from '../../components/category-selector/categorySelectorComponent';
 import { icons } from './index.config';
 
 export default class CategorySelectorContainer extends Component {

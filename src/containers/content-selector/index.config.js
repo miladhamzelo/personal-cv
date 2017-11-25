@@ -1,9 +1,10 @@
 
 import ExperienceContainer from '../experience/experienceContainer';
+import ContactMeContainer from '../contact-me/contactMeContainer';
 
 export const config = {
 skills: ExperienceContainer,
 experience: ExperienceContainer,
-aboutMe: ExperienceContainer,
+contactMe: ContactMeContainer,
 education: ExperienceContainer
 };

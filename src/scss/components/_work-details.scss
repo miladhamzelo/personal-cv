@@ -1,19 +1,30 @@
-.container-gap {
-    position: relative;
-    top: 15%;
-}
-
+@import '../abstracts/_variables';
+@import '../layout/_hacks';
 .work-details-container {
-    margin: 0 auto;
+    @extend .position-horizontal-centered;
 }
 
 .work-details-header {
     text-align: center;
-    @extend .container-gap;
 }
 
 .work-details {
     text-align: left !important;
-    margin-left: 50px;
-    @extend .container-gap;
+    margin: 0 50px 0 50px;
+    line-height: 50px;
+}
+
+.job-title-container {
+    color: $cv_dark_grey;
+    font-weight: semi-bold;
+    font-family: cursive;
+}
+
+.work-details-content {
+    margin-top: 50px;
+}
+
+.filler {
+    display: block;
+    height: 50px;
 }

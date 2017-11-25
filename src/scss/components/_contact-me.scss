@@ -1,0 +1,85 @@
+@import '../layout/_content';
+@import '../layout/_hacks';
+@import '../abstracts/_variables';
+
+a:hover, a:visited, a:link, a:active
+{
+    color: $cv_dark_grey;
+    text-decoration: none;
+}
+
+.contact-me-container {
+    @extend .content-float-container;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-me-container>div {
+    margin-top: 25px;
+}
+
+.contact-icon-header,
+.contact-me-header-container,
+.contact-me-subheader-container,
+.contact-me-badge-item-container,
+{
+    @extend .position-horizontal-centered;
+}
+
+.contact-me-header-container {
+    font-weight: bold;
+    font-size: 1.8rem;
+}
+
+.contact-me-subheader-container{
+    font-size: 1.1rem;
+    color: $cv_dark_grey;
+}
+
+.contact-info-container{
+    height: auto;
+    width: 50px;
+    background-color: white;
+    border-radius: 10px;
+    @extend .position-horizontal-centered;
+}
+
+.contact-method-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.contact-me-badge-item-container {
+    display: flex;
+    flex-direction: column;
+    height: 250px;
+    width: 200px;
+}
+
+.contact-me-badge-item-container>span {
+    margin-top: 15px;
+    text-align: center;
+    display: block;
+}
+
+.image-container {
+    height: 128px;
+    background-repeat: no-repeat;
+    width: 128px;
+    @extend .position-horizontal-centered;
+}
+
+.linked-in-badge {
+    @extend .image-container;
+    background-image: url('../../assets/images/linkedin.png')
+}
+
+.github-badge {
+    @extend .image-container;
+    background-image: url('../../assets/images/github.png')
+}
+
+.email-badge {
+    @extend .image-container;
+    background-image: url('../../assets/images/email-icon.png')
+}

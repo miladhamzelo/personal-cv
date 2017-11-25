@@ -3,6 +3,12 @@ import { compose, withProps } from "recompose"
 import { withScriptjs, withGoogleMap, GoogleMap, Marker } from "react-google-maps";
 import MapMarker from './mapMarker';
 
+const markers = (locations, company) => {
+    return locations.map(location => {
+        return <MapMarker key={company} company={company} location={location} />
+    });
+}
+
 const MapComponent = compose(
     withProps({
         googleMapURL: "https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places",
@@ -19,7 +25,7 @@ const MapComponent = compose(
         defaultZoom={10}
         center={{ lat: props.center.lat, lng: props.center.lng }}
     >
-        <MapMarker company={props.company} location={props.location} />
+        {markers(props.location, props.company)}
     </GoogleMap>
     )
 

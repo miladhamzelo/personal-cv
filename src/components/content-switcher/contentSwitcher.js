@@ -14,7 +14,7 @@ const ContentSwitcher = (props) => {
         const rightStyle = {
             float: 'right'
         }
-        return props.showContent ? <div className="content-switcher-container">
+        return props.showSwitcher ? <div className="content-switcher-container">
             <IconButton style={leftStyle} onClick={props.prev.bind(this)}><HardwareKeyboardArrowLeft style={leftStyle} />
             </IconButton>
             <IconButton style={rightStyle} onClick={props.next.bind(this)}>

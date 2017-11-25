@@ -1,0 +1,10 @@
+@import '../layout/_hacks';
+@import '../abstracts/_variables';
+
+.content-float-container {
+    @extend .position-horizontal-centered;
+    height: 600px;
+    width: 600px;
+    @include linear-gradient($cv_light_grey, $cv_dark_grey);
+    border-radius: 25px;
+}
