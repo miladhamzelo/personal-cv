@@ -120,7 +120,7 @@ export const initialState = {
     {
       key: 'hdc',
       company: 'Home Depot Canada',
-      title: 'Sr Front End Developer',
+      title: 'Sr. Front End Developer',
       location: [{
         lat: 43.728811,
         lng: -79.329219

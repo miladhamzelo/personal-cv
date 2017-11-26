@@ -9,6 +9,10 @@ const markers = (locations, company) => {
     });
 }
 
+const zoom = (newZoom) => {
+    return newZoom ? newZoom : 10;
+};
+
 const MapComponent = compose(
     withProps({
         googleMapURL: "https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places",
@@ -22,7 +26,7 @@ const MapComponent = compose(
 
 
     <GoogleMap
-        defaultZoom={10}
+        defaultZoom={zoom(props.newZoom)}
         center={{ lat: props.center.lat, lng: props.center.lng }}
     >
         {markers(props.location, props.company)}

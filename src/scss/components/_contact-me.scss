@@ -1,9 +1,10 @@
 @import '../layout/_content';
 @import '../layout/_hacks';
 @import '../abstracts/_variables';
-
-a:hover, a:visited, a:link, a:active
-{
+a:hover,
+a:visited,
+a:link,
+a:active {
     color: $cv_dark_grey;
     text-decoration: none;
 }
@@ -14,34 +15,39 @@ a:hover, a:visited, a:link, a:active
     flex-direction: column;
 }
 
-.contact-me-container>div {
-    margin-top: 25px;
+.contact-me-page-container {
+    div,
+    h2 {
+        margin-top: 30px;
+    }
 }
 
 .contact-icon-header,
-.contact-me-header-container,
 .contact-me-subheader-container,
 .contact-me-badge-item-container,
 {
     @extend .position-horizontal-centered;
 }
 
-.contact-me-header-container {
-    font-weight: bold;
-    font-size: 1.8rem;
-}
-
-.contact-me-subheader-container{
+.contact-me-subheader-container {
+    margin-top: 70px !important;
     font-size: 1.1rem;
     color: $cv_dark_grey;
 }
 
-.contact-info-container{
+.contact-info-container {
+    @extend .scale-item;
     height: auto;
     width: 50px;
     background-color: white;
     border-radius: 10px;
     @extend .position-horizontal-centered;
+}
+
+.contact-info-container:hover {
+    background-color: $cv_dark_green;
+    color: blue;
+    @extend .scale-item:hover;
 }
 
 .contact-method-container {

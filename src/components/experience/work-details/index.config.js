@@ -23,7 +23,7 @@ with service-layer API developement.`;
 
 const cap = `During my tenure at Capco I worked on project, an internal-facing web-application. The application
 was the Admin Panel for BHOB Harris's customer facing mobile app.  The customer facing mobile app was 
-written in Angular 4x, using Ionic. The admin-desktop app was also written in Angular 4x. I was responsible for everything
+written in Angular 4.x, using Ionic. The admin-desktop app was also written in Angular 4.x. I was responsible for everything
 front-end/UI related on the Admin application.`;
 
 const hdc = `My latest role is with the Home Depot Canada.  Home Depot is leverging Hybris SAP 6.2 as a content

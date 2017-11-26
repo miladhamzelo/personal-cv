@@ -1,0 +1,54 @@
+@import '../layout/_content';
+@import '../abstracts/_mixins';
+@import '../abstracts/_variables';
+.education-component-container {
+    @extend .content-float-container;
+    display: flex;
+    flex-direction: column;
+}
+
+.school-info-container {
+    position:relative;
+    top: 15%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    height:50%;
+}
+
+.school-image {
+    margin-right: -50px;
+    width: 150px !important;
+    height: 150px !important;
+    border-radius: 75px;
+    @include background(#{map-get($image_urls, education-pic)});
+    background-position: top!important;
+}
+
+.school-image,
+.school-info {
+    @extend .position-horizontal-centered;
+}
+
+.school-info {
+    margin-top: 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    span {
+        height: 25px;
+    }
+    .focus-study{
+        margin-top: 50!important;
+        color: $cv_dark_grey;
+        font-size: 0.85rem;
+    }
+    .degree-dates{
+        color: $cv_dark_grey;
+        font-size: 0.75rem;
+    }
+}
+
+.school-map-container{
+    height: 50%;
+}

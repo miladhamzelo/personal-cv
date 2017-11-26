@@ -24,6 +24,7 @@ const ExperienceComponent = (props) => {
 
     return (
         <div>
+            <h2> Experience </h2>
             <div className="experience-component-container position-horizontal-centered">
                 <div className="header-container">
                     <div className="association-header-container">
@@ -39,8 +40,13 @@ const ExperienceComponent = (props) => {
                     </div>
                 </div>
                 <div className="work-history-container">
+                <div className="form-tech-list">
+                    <div className="subheader-container">
+                    <Subheader> Relevent Skills </Subheader>
+                    </div>
                     <div className="tech-list-container">
                         <TechListComponent items={_getItems(job.key)} />
+                    </div>
                     </div>
                     <div className="work-information-container">
                         <div className="subheader-container">

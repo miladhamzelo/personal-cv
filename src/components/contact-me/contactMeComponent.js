@@ -17,24 +17,17 @@ const ContactMeComponent = (props) => {
     };
 
     return (
-        <div className="contact-me-container">
-
-            <div className="contact-icon-header"> <HardwarePhoneIphone style={iconStyle} /> </div>
-
-            <div className="contact-me-header-container">
-                Contact Me
+        <div className="contact-me-page-container">
+            <h2> Contact Me </h2>
+            <div className="contact-me-container">
+                <div className="contact-icon-header"> <HardwarePhoneIphone style={iconStyle} /> </div>
+                <div className="contact-me-subheader-container">
+                    Check out my profile or send me a message
             </div>
-
-            <div className="contact-me-subheader-container">
-                Check out my profile or send me a message
+                <div className="contact-method-container">
+                    {badgeItems}
+                </div>
             </div>
-
-            <div className="contact-method-container">
-
-                {badgeItems}
-
-            </div>
-
         </div>
     );
 }

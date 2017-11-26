@@ -1,4 +1,5 @@
 @import '../abstracts/_variables';
+@import '../abstracts/_mixins';
 @import '../layout/_hacks';
 .work-details-container {
     @extend .position-horizontal-centered;
@@ -22,9 +23,4 @@
 
 .work-details-content {
     margin-top: 50px;
-}
-
-.filler {
-    display: block;
-    height: 50px;
 }

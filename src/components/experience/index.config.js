@@ -41,9 +41,9 @@ export const skills = {
         { title: 'Typescript & ES6', avatarKey: 'grade' }
     ],
     cap: [
-        { title: 'Angular 4', avatarKey: 'pet' },
+        { title: 'Angular 4.x', avatarKey: 'pet' },
         { title: '@ngrx', avatarKey: 'hourglass' },
-        { title: 'Webpack 2x', avatarKey: 'motorcycle' },
+        { title: 'Webpack 2.x', avatarKey: 'motorcycle' },
         { title: 'Rxjs', avatarKey: 'fingerprint' },
         { title: 'SASS', avatarKey: 'gavel' },
         { title: 'Material Ui', avatarKey: 'rowing' },
@@ -53,8 +53,8 @@ export const skills = {
         { title: 'Hybris SAP 6.5', avatarKey: 'fingerprint' },
         { title: 'Angular 5', avatarKey: 'motorcycle' },
         { title: 'Typescript', avatarKey: 'rowing' },
-        { title: '@ngrx 4x', avatarKey: 'gavel' },
+        { title: '@ngrx 4.x', avatarKey: 'gavel' },
         { title: 'SASS', avatarKey: 'pet' },
-        { title: 'Webpack 3x', avatarKey: 'hourglass' }
+        { title: 'Webpack 3.x', avatarKey: 'hourglass' }
     ]
 }

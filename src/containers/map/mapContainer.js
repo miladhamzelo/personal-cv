@@ -6,7 +6,7 @@ export default class MapContainer extends Component {
 
     render() {
         return (
-            <MapComponent center={this.props.center} location={this.props.location} company={this.props.company} />
+            <MapComponent newZoom={this.props.newZoom} center={this.props.center} location={this.props.location} company={this.props.company} />
         );
     }
 }

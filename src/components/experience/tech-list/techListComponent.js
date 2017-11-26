@@ -24,7 +24,6 @@ const TechListComponent = (props) => {
 
     return (
             <List>
-                <Subheader>Relevent Skills</Subheader>
                 {items}
             </List>
     )

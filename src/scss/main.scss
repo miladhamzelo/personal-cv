@@ -6,13 +6,20 @@
 @import './components/_experience-component';
 @import './components/_category-selector';
 @import './components/_content-switcher';
-@import './components/_skills-list';  
-@import './components/_map-marker';
+@import './components/_skills-list';
+@import './components/_map-component';html,
+body,
+.app-container {
+    height: 100%;
+    overflow: hidden;
+    font-family: "Helvetica", cursive, sans-serif;
+    h2{
+        font-family: 'Lobster', Georgia, Times, serif;
+        text-align:center;
+    }
+}
+
 @import './components/_work-details';
 @import './components/_contact-me';
+@import './components/_education-component';
 
-html, body, .app-container {
-    height: 100%;
-    overflow:hidden;
-    font-family: "Helvetica", cursive, sans-serif;
-}

@@ -1,7 +1,53 @@
+@import '../layout/_content';
+@import '../layout/_hacks';
+.custom-scrollbar {
+    scrollbar-face-color: #367CD2!important;
+    scrollbar-shadow-color: #FFFFFF!important;
+    scrollbar-highlight-color: #FFFFFF!important;
+    scrollbar-3dlight-color: #FFFFFF!important;
+    scrollbar-darkshadow-color: #FFFFFF!important;
+    scrollbar-track-color: #FFFFFF!important;
+    scrollbar-arrow-color: #FFFFFF!important;
+}
 
+;
+.skills-list-component-container {
+    display: flex;
+    flex-direction: row;
+    width: inherit;
+    @extend .content-float-container;
+    .list-in-thirds {
+        width: 33%;
+        border-right: 1px solid black;
+        height: auto;
+        overflow: hidden;
+        List,
+        svg {
+            margin-top: 10px;
+        }
+        svg {
+            @extend .scale-item
+        }
+        svg:hover {
+            @extend .scale-item:hover;
+        }
+    }
+}
 
-.tech-list-container{
-    height: 300px;
-    overflow-y: auto;
+.tech-list-container {
+    overflow-y: scroll;
     max-width: 250px;
+    width: 100%;
+    @extend .custom-scrollbar;
+}
+
+.hide-border {
+    border: hidden!important;
+}
+
+.skills-header-container {
+    text-align: center;
+    Subheader {
+        font-size: 1.8rem!important;
+    }
 }

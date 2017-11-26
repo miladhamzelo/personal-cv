@@ -3,6 +3,7 @@
 @import '../abstracts/_colors';
 @import '../layout/_hacks';
 @import '../layout/_content';
+
 .experience-component-container {
     @extend .content-float-container;
 }
@@ -112,11 +113,12 @@
 }
 
 .tech-list-container {
-    width: 30%;
+    width: 100%;
     float: left;
-    @extend .light_grey_border;
     border-radius: 10px;
     margin-left: 2%;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 .work-information-container {
@@ -126,11 +128,24 @@
     border-radius: 10px;
     text-align: center;
     @extend .light_grey_border;
-    width: 60%;
+    width: 70%;
     height: 250px;
 }
 
 .map-container {
     height: 100%;
     @extend .light_grey_border;
+}
+
+.form-tech-list {
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    @extend .light_grey_border;
+    border-radius: 10px;
+    width: 30%;
+}
+
+.subheader-container {
+    @extend .position-horizontal-centered;
 }
