@@ -1,10 +1,11 @@
 @import '../layout/hacks';
 @import '../abstracts/_mixins';
+@import '../abstracts/_variables';
 .category-selector-widget-wrapper {
     display: block;
     padding: 0;
-    width: 200px;
-    height: 200px;
+    width: 400px;
+    height: 400px;
     border: 1px;
     border-radius: 50%;
     overflow: hidden;
@@ -32,12 +33,13 @@
 }
 
 .circle-quarter {
+    text-align:center;
     position: relative;
     display: inline-block;
     margin: 0;
     padding: 0;
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
     -webkit-transition: all 200ms ease-in;
     -webkit-transform: scale(1);
     -ms-transition: all 200ms ease-in;
@@ -46,6 +48,10 @@
     -moz-transform: scale(1);
     transition: all 200ms ease-in;
     transform: scale(1);
+    span{
+        font-size:0.6rem;
+        color:$cv_dark_grey;
+    }
 }
 
 .circle-quarter:hover {
@@ -84,14 +90,21 @@
 //category item
 .category-item-wrapper {
     text-align: center;
-    @include position-element-from-top(relative, 50%);
+    font-size: 1.05rem;
+    color: $cv_dark_grey;
     @extend .scale-item;
+    svg{
+       @extend .position-horizontal-centered;
+       height: 48px;
+       width: 48px;
+    }
 }
-
+  
 .category-item-wrapper:hover {
     @extend .scale-item:hover;
+    color: $cv_light_grey;
 }
 
-.bottom-element {
-    top: 25% !important
+.filler{
+    height:66px;
 }

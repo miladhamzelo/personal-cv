@@ -8,7 +8,8 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "start": "concurrently --kill-others \"npm run start-dev-server\" \"npm run start-webpack-dev-server\"",
+    "start:dev": "concurrently --kill-others \"npm run start-dev-server\" \"npm run start-webpack-dev-server\"",
+    "start:prod": "",
     "dev": "concurrently --kill-others \"npm run start-webpack-dev-server\" \"npm run start-dev-server\"",
     "start-webpack-dev-server": "cross-env NODE_ENV=development node ./webpack/run-webpack-server.js",
     "start-dev-server": "cross-env NODE_ENV=development nodemon src/server",

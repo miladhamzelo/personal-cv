@@ -45,8 +45,8 @@ a:active {
 }
 
 .contact-info-container:hover {
-    background-color: $cv_dark_green;
-    color: blue;
+    background-color: $cv_dark_bluegrey;
+    color: $cv_light_grey;
     @extend .scale-item:hover;
 }
 

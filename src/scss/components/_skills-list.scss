@@ -1,16 +1,8 @@
 @import '../layout/_content';
 @import '../layout/_hacks';
-.custom-scrollbar {
-    scrollbar-face-color: #367CD2!important;
-    scrollbar-shadow-color: #FFFFFF!important;
-    scrollbar-highlight-color: #FFFFFF!important;
-    scrollbar-3dlight-color: #FFFFFF!important;
-    scrollbar-darkshadow-color: #FFFFFF!important;
-    scrollbar-track-color: #FFFFFF!important;
-    scrollbar-arrow-color: #FFFFFF!important;
-}
 
-;
+
+
 .skills-list-component-container {
     display: flex;
     flex-direction: row;
@@ -38,7 +30,6 @@
     overflow-y: scroll;
     max-width: 250px;
     width: 100%;
-    @extend .custom-scrollbar;
 }
 
 .hide-border {

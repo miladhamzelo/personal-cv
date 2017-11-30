@@ -15,8 +15,6 @@ module.exports = {
             'webpack/hot/only-dev-server',
             './src/app',
             './src/scss/main.scss'
-
-
         ]
     },
     output: {
@@ -36,7 +34,6 @@ module.exports = {
     },
     devtool: "source-map",
     plugins: [
-
         new ExtractTextPlugin({
             disable: false,
             filename: "[name].css",

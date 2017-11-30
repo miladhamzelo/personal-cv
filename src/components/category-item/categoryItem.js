@@ -1,15 +1,20 @@
 import React from 'react'
-import SvgIcon from 'material-ui/SvgIcon';
 
 const categoryItem = (props) => {
 
-    const classNames = ['category-item-wrapper'];
-    if (props.bottomItem) {
-        classNames.push('bottom-element');
+    const style = {
+        width: '48px',
+        height: '48px'
+    };
+
+    const _getContent = () =>{
+        return props.index > 2 ? <div className="category-item-wrapper"><p> {props.title}</p> <props.icon style={style}/></div> :
+        <div className="category-item-wrapper"><div className="filler"></div><props.icon style={style} /><p>{props.title}</p></div>
     }
+
     return (
-        <div onClick={props.actions.setCategory.bind(this, props.displayKey)} className={classNames.join(' ')}>
-            <props.icon />
+        <div onClick={props.actions.setCategory.bind(this, props.displayKey)}>
+            {_getContent()}
         </div>
     );
 
