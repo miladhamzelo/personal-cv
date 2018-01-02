@@ -1,55 +1,54 @@
-import path from 'path';
-import http from 'http';
+import 'babel-polyfill';
 import express from 'express';
-import httpProxy from 'http-proxy';
-import compression from 'compression';
-
-const webpack = require('webpack');
-const config = require('../../webpack.config');
-
-const compiler = webpack(config);
+import { matchRoutes } from 'react-router-config';
+import proxy from 'express-http-proxy';
+import Routes from '../common/routes';
+import ssrHandler from './helpers/ssrHandler';
+import createStore from './helpers/createStore';
 
 const app = express();
-const proxy = httpProxy.createProxyServer();
-const server = new http.Server(app);
+const port = process.env.PORT || 3000;
 
-app.use(compression());
-
-app.use(express.static(path.join(__dirname, '../..', 'dist')));
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'ejs');
-
-/* istanbul ignore next */
-if (__DEVELOPMENT__) { // eslint-disable-line no-undef
-    app.all('/dist/*', (req, res) => {
-        proxy.web(req, res, {
-            target: 'http://localhost:8080',
-        });
-    });
-}
-
-app.use(require('webpack-hot-middleware')(compiler, {
-  log: console.log,
-  path: '/__webpack_hmr',
-  heartbeat: 10 * 1000
-}));
-
-const setRoutes = (routes) => {
-    routes.forEach(route => {
-        require(route).default(app);
-    });
-};
-
-const routes = ['./routes/server-side-rendering/ssrHandler'];
-
-setRoutes(routes);
-
-/* istanbul ignore next */
-server.listen('3000', (err) => {
-    if (err) {
-        console.error(err); // eslint-disable-line no-console
+app.use(
+  '/api',
+  proxy('http://react-ssr-api.herokuapp.com', {
+    proxyReqOptDecorator(opts) {
+      opts.headers['x-forwarded-host'] = 'localhost:3000';
+      return opts;
     }
-    console.info('==> 💻  Open http://%s:%s in a browser to view the app.', 'localhost', '3000'); // eslint-disable-line no-console
+  })
+);
+app.use(express.static('public'));
+app.get('*', (req, res) => {
+  const store = createStore(req);
+
+  const promises = matchRoutes(Routes, req.path)
+    .map(({ route }) => {
+      return route.loadData ? route.loadData(store) : null;
+    })
+    .map(promise => {
+      if (promise) {
+        return new Promise((resolve, reject) => {
+          promise.then(resolve).catch(resolve);
+        });
+      }
+    });
+
+  Promise.all(promises).then(() => {
+    const context = {};
+    const content = ssrHandler(req, store, context);
+
+    if (context.url) {
+      return res.redirect(301, context.url);
+    }
+    if (context.notFound) {
+      res.status(404);
+    }
+
+    res.send(content);
+  });
 });
 
-export default app;
+app.listen(port, () => {
+  console.log(`Listening on port ${port}`);
+});

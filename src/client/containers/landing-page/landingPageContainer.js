@@ -18,11 +18,10 @@ class LandingPageContainer extends Component {
     }
 }
 
-
-const mapDispatchToProps = (dispatch) => {
-    return {
-        actions: bindActionCreators(ViewActions, dispatch),
-    };
+function mapStateToProps({ admins }) {
+    return { admins };
 }
 
-export default connect(mapDispatchToProps)(LandingPageContainer);
+export default {
+    component: connect(mapStateToProps)(LandingPageContainer)
+}

@@ -77,15 +77,15 @@ a:active {
 
 .linked-in-badge {
     @extend .image-container;
-    background-image: url('../../assets/images/linkedin.png')
+    background-image: url('../../../assets/images/linkedin.png')
 }
 
 .github-badge {
     @extend .image-container;
-    background-image: url('../../assets/images/github.png')
+    background-image: url('../../../assets/images/github.png')
 }
 
 .email-badge {
     @extend .image-container;
-    background-image: url('../../assets/images/email-icon.png')
+    background-image: url('../../../assets/images/email-icon.png')
 }
