@@ -8,7 +8,7 @@ const categoryItem = (props) => {
     };
 
     const _getContent = () =>{
-        return props.index > 2 ? <div className="category-item-wrapper"><p> {props.title}</p> <props.icon style={style}/></div> :
+        return props.index > 2 ? <div className="category-item-wrapper gap-top"><p> {props.title}</p> <props.icon style={style}/></div> :
         <div className="category-item-wrapper"><div className="filler"></div><props.icon style={style} /><p>{props.title}</p></div>
     }
 

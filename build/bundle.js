@@ -663,7 +663,7 @@ var categoryItem = function categoryItem(props) {
     var _getContent = function _getContent() {
         return props.index > 2 ? _react2.default.createElement(
             'div',
-            { className: 'category-item-wrapper' },
+            { className: 'category-item-wrapper gap-top' },
             _react2.default.createElement(
                 'p',
                 null,
