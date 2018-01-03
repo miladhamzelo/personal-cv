@@ -1,9 +1,20 @@
 @import '../layout/hacks';
 @import '../abstracts/_mixins';
 @import '../abstracts/_variables';
+
+.category-selector-wrapper{
+    height: 500px;
+    width: 500px;
+    border-radius: 50%;
+    @include linear-gradient($cv_dark_blue, $cv_light_blue);
+}
+
+
 .category-selector-widget-wrapper {
     display: block;
     padding: 0;
+    top:50px;
+    position:relative;
     width: 400px;
     height: 400px;
     border: 1px;
@@ -90,7 +101,7 @@
 //category item
 .category-item-wrapper {
     text-align: center;
-    font-size: 1.05rem;
+    font-size: .75rem;
     color: $cv_dark_grey;
     @extend .scale-item;
     svg{

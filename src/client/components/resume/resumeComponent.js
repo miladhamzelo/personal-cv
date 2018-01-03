@@ -10,9 +10,9 @@ const ResumeComponent = (props) => {
     })();
 
     return (
-        <div className="resume-backdrop position-vertical-centered">
-            {content}
-        </div>
+        <div className="city-backdrop position-vertical-centered">
+                {content}
+            </div>
     );
 }
 

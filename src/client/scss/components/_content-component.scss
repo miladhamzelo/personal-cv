@@ -7,9 +7,9 @@ svg {
 }
 
 .content-component-wrapper {
-    height: 800px;
-    width: 700px;
-    @include linear-gradient($cv_light_bluegrey, $cv_dark_bluegrey);
+    height: 650px;
+    width: 650px;
+    @include linear-gradient($cv_light_blue, $cv_dark_blue);
     margin: 0 auto;
     border-radius: 25px;
 }

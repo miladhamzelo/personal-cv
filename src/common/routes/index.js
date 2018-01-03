@@ -1,15 +1,13 @@
 import React from 'react';
-import LandingPage from '../../client/containers/landing-page/landingPageContainer';
 import ResumeContainer from '../../client/containers/resume/resumeContainer'
 
 export default [
     {
-        ...LandingPage,
+        ...ResumeContainer,
         path: '/',
         exact: true
     },
     {
-        ...ResumeContainer,
-        path: '/resume'
+        ...ResumeContainer
     }
 ]

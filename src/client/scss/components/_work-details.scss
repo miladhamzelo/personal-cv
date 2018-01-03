@@ -9,14 +9,20 @@
     text-align: center;
 }
 
+.position-header-container{
+    color: $cv_dark_grey;
+}
+
 .work-details {
     text-align: left !important;
+    color: $cv_light_grey;
     margin: 0 50px 0 50px;
     line-height: 50px;
+    font-family: "Arial Narrow", Arial, sans-serif;
 }
 
 .job-title-container {
-    color: $cv_dark_grey;
+    color: $cv_light_grey;
     font-weight: semi-bold;
     font-family: cursive;
 }

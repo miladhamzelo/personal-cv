@@ -5,7 +5,7 @@ import { jobDuties } from './index.config';
 const WorkDetailsComponent = (props) => {
 
     const style = {
-        height: 600,
+        height: 'auto',
         width: 600,
         textAlign: 'center',
         display: 'block',
@@ -16,11 +16,9 @@ const WorkDetailsComponent = (props) => {
 
     return (
         <div>
-            <div className="filler"></div>
             <div className="work-details-container"><Paper style={style} zDepth={5} rounded={false}>
-                <div className="filler"></div>
                 <h1 className="work-details-header"><span className="job-title-container">{props.jobTitle} </span><span className="position-header-container">Job Duties : </span>  </h1>
-                <p className="work-details"> {jobDuties[props.jobKey]}</p>
+                <p className="work-details"> {`${jobDuties[props.jobKey]}`}</p>
             </Paper>
             </div>
         </div>

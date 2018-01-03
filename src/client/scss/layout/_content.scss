@@ -3,8 +3,8 @@
 
 .content-float-container {
     @extend .position-horizontal-centered;
-    height: 600px;
+    height: 500px;
     width: 600px;
-    @include linear-gradient($cv_light_grey, $cv_dark_grey);
+    @include linear-gradient($cv_dark_blue, $cv_light_blue);
     border-radius: 25px;
 }

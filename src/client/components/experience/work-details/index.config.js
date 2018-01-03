@@ -1,11 +1,15 @@
 
 const gnx = `Greennexxus is a software as a service startup, 
 allowing organizations to track their environmentally friendly initiatives.
+
 I was a Full stack ASP.net web developer responsible for delivering and maintaining the UI for users of the platform.
+
 Initially the platform was web-based only, but near the end of my tenure we started introducing mobile-first web views
 and toying around with native mobile-apps using Xamarin.`;
 
-const sfw = `Safeway was in the process of being bought out by Sobeys during my contract. 
+const sfw = `Safeway     
+
+was in the process of being bought out by Sobeys during my contract. 
 Our teams duty was to rebrand an existing mobile-first view web application while upgrading from MVC 3 to 5. 
 I was a Full stack ASP.net developer responbile for delivering the mobile and web UI for the web application.`;
 
