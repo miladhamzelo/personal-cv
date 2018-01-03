@@ -242,7 +242,8 @@ svg {
   left: 0; }
 
 .content-component-wrapper {
-  height: 650px;
+  height: auto;
+  padding-bottom: 50px;
   width: 650px;
   background: #0D47A1;
   background: -moz-linear-gradient(top, #BBDEFB 0%, #0D47A1 100%);
@@ -482,7 +483,8 @@ svg {
   border-radius: 10px;
   text-align: center;
   width: 70%;
-  height: 250px; }
+  height: auto;
+  padding-bottom: 5px; }
 
 .map-container {
   height: 200px; }

@@ -134,7 +134,8 @@
     text-align: center;
     @extend .light_grey_border;
     width: 70%;
-    height: 250px;
+    height: auto;
+    padding-bottom:5px;
 }
 
 .map-container {

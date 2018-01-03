@@ -1,9 +1,7 @@
 
 const gnx = `Greennexxus is a software as a service startup, 
 allowing organizations to track their environmentally friendly initiatives.
-
 I was a Full stack ASP.net web developer responsible for delivering and maintaining the UI for users of the platform.
-
 Initially the platform was web-based only, but near the end of my tenure we started introducing mobile-first web views
 and toying around with native mobile-apps using Xamarin.`;
 
@@ -25,7 +23,7 @@ was for a Canadian based financial institution. The app helped call center agent
 dealing with high volumes of calls. I was a full stack developer helping deliver the client facing UI as well as dealing
 with service-layer API developement.`;
 
-const cap = `During my tenure at Capco I worked on project, an internal-facing web-application. The application
+const cap = `During my tenure at Capco I worked on one project, an internal-facing web-application. The application
 was the Admin Panel for BHOB Harris's customer facing mobile app.  The customer facing mobile app was 
 written in Angular 4.x, using Ionic. The admin-desktop app was also written in Angular 4.x. I was responsible for everything
 front-end/UI related on the Admin application.`;

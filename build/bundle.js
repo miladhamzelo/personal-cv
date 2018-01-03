@@ -1641,7 +1641,7 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var gnx = "Greennexxus is a software as a service startup, \nallowing organizations to track their environmentally friendly initiatives.\n\nI was a Full stack ASP.net web developer responsible for delivering and maintaining the UI for users of the platform.\n\nInitially the platform was web-based only, but near the end of my tenure we started introducing mobile-first web views\nand toying around with native mobile-apps using Xamarin.";
+var gnx = "Greennexxus is a software as a service startup, \nallowing organizations to track their environmentally friendly initiatives.\nI was a Full stack ASP.net web developer responsible for delivering and maintaining the UI for users of the platform.\nInitially the platform was web-based only, but near the end of my tenure we started introducing mobile-first web views\nand toying around with native mobile-apps using Xamarin.";
 
 var sfw = "Safeway     \n\nwas in the process of being bought out by Sobeys during my contract. \nOur teams duty was to rebrand an existing mobile-first view web application while upgrading from MVC 3 to 5. \nI was a Full stack ASP.net developer responbile for delivering the mobile and web UI for the web application.";
 
@@ -1649,7 +1649,7 @@ var ntt = "My team was the offshore core-services team for Fidelity Investments 
 
 var inf = "My tenure at Infusion had me working on two projects. The first was for a US-Based financial instituion. \nI was a fullstack Javascript Developer helping build the UI for a client-based web app. This was considered cutting edge\nat the time as we were one of the first teams around to leverage react in its infancy (react 0.12-0.13). The second project\nwas for a Canadian based financial institution. The app helped call center agents streamline their work flow when \ndealing with high volumes of calls. I was a full stack developer helping deliver the client facing UI as well as dealing\nwith service-layer API developement.";
 
-var cap = "During my tenure at Capco I worked on project, an internal-facing web-application. The application\nwas the Admin Panel for BHOB Harris's customer facing mobile app.  The customer facing mobile app was \nwritten in Angular 4.x, using Ionic. The admin-desktop app was also written in Angular 4.x. I was responsible for everything\nfront-end/UI related on the Admin application.";
+var cap = "During my tenure at Capco I worked on one project, an internal-facing web-application. The application\nwas the Admin Panel for BHOB Harris's customer facing mobile app.  The customer facing mobile app was \nwritten in Angular 4.x, using Ionic. The admin-desktop app was also written in Angular 4.x. I was responsible for everything\nfront-end/UI related on the Admin application.";
 
 var hdc = "My latest role is with the Home Depot Canada.  Home Depot is leverging Hybris SAP 6.2 as a content\ndelivery system, among its other features. Hybris 6.5 has the ability to integrate with SPA's for view-slots. My role\nhere will be overseeing the integration and helping architect the new-front code, moving from ES5 and JSPS to \nmodern Typescript (ES6) and Angular 5.";
 
