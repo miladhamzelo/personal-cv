@@ -45,5 +45,6 @@ function mapDispatchToProps(dispatch) {
     }
 }
 
-export default connect(mapStateToProps,
-    mapDispatchToProps)(ResumeContainer);
+export default { component: connect(mapStateToProps,
+    mapDispatchToProps)(ResumeContainer)
+};
