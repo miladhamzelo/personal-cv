@@ -62,10 +62,6 @@ typings/
 #minified code
 dist/
 
-public/
-
-build/
-
 src/.DS_Store
 
 #package-loc
