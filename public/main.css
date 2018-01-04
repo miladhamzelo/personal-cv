@@ -41,13 +41,20 @@
 
 .city-backdrop {
   height: 100%;
+  width: 100%;
   -webkit-background-size: contain;
   -moz-background-size: contain;
   -o-background-size: contain;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url(744c5eae58c4604c381f0201801a666b.jpg); }
+  background: #0D47A1;
+  background: -moz-linear-gradient(top, #BBDEFB 0%, #0D47A1 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #BBDEFB), color-stop(100%, #0D47A1));
+  background: -webkit-linear-gradient(top, #BBDEFB 0%, #0D47A1 100%);
+  background: -o-linear-gradient(top, #BBDEFB 0%, #0D47A1 100%);
+  background: linear-gradient(to bottom, #BBDEFB 0%, #0D47A1 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#BBDEFB, endColorstr=#0D47A1); }
 
 .page-wrapper {
   height: 100%;
@@ -368,6 +375,7 @@ svg {
 
 .safeway-img {
   height: 100%;
+  width: 100%;
   -webkit-background-size: contain;
   -moz-background-size: contain;
   -o-background-size: contain;
@@ -378,6 +386,7 @@ svg {
 
 .gnx-img {
   height: 100%;
+  width: 100%;
   -webkit-background-size: contain;
   -moz-background-size: contain;
   -o-background-size: contain;
@@ -388,6 +397,7 @@ svg {
 
 .ntt-img {
   height: 100%;
+  width: 100%;
   -webkit-background-size: contain;
   -moz-background-size: contain;
   -o-background-size: contain;
@@ -398,6 +408,7 @@ svg {
 
 .inf-img {
   height: 100%;
+  width: 100%;
   -webkit-background-size: contain;
   -moz-background-size: contain;
   -o-background-size: contain;
@@ -408,6 +419,7 @@ svg {
 
 .cap-img {
   height: 100%;
+  width: 100%;
   -webkit-background-size: contain;
   -moz-background-size: contain;
   -o-background-size: contain;
@@ -418,6 +430,7 @@ svg {
 
 .hdc-img {
   height: 100%;
+  width: 100%;
   -webkit-background-size: contain;
   -moz-background-size: contain;
   -o-background-size: contain;
@@ -1097,6 +1110,7 @@ a:active {
   height: 150px !important;
   border-radius: 75px;
   height: 100%;
+  width: 100%;
   -webkit-background-size: contain;
   -moz-background-size: contain;
   -o-background-size: contain;

@@ -10,6 +10,7 @@
 
 @mixin background($image: null) {
     height: 100%;
+    width: 100%;
     -webkit-background-size: contain;
     -moz-background-size: contain;
     -o-background-size: contain;

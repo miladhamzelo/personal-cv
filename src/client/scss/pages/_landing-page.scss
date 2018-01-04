@@ -3,7 +3,8 @@
 
 
 .city-backdrop {
-    @include background(#{map-get($image_urls, mainpageBackground)});
+    @include background();
+    @include linear-gradient($cv_light_blue, $cv_dark_blue);
 }
 
 
