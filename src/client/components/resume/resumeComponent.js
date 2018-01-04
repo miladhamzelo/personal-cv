@@ -9,6 +9,7 @@ const ResumeComponent = (props) => {
             <ContentContainer actions={props.actions} displayKey={props.selectedKey} experience={props.experience} showExperience={props.showExperience} selectedSlide={props.selectedSlide} />;
     })();
 
+
     return (
         <div className="city-backdrop position-vertical-centered">
                 {content}
