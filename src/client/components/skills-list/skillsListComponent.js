@@ -3,11 +3,16 @@
     import ActionInfo from 'material-ui/svg-icons/action/info';
     import { List, ListItem } from 'material-ui/List';
 
+    const goToLink = (url) => {
+        window.open(url);
+    }
+
     const SkillsListComponent = () => {
 
         const items = (() => {
             return skills.map(item => {
                 return <ListItem
+                    onClick={() => {goToLink(item.url)}}
                     key={item.name}
                     primaryText={item.name}
                     leftAvatar={<a href={item.url} target="_blank"><ActionInfo /></a>}

@@ -1985,11 +1985,18 @@ var _List = __webpack_require__(6);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+var goToLink = function goToLink(url) {
+    window.open(url);
+};
+
 var SkillsListComponent = function SkillsListComponent() {
 
     var items = function () {
         return _index.skills.map(function (item) {
             return _react2.default.createElement(_List.ListItem, {
+                onClick: function onClick() {
+                    goToLink(item.url);
+                },
                 key: item.name,
                 primaryText: item.name,
                 leftAvatar: _react2.default.createElement(
