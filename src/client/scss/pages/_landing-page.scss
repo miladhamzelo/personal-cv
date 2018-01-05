@@ -3,7 +3,7 @@
 
 .city-backdrop {
     @include background();
-    @include linear-gradient($cv_light_blue, $cv_dark_blue);
+    @include linear-gradient($cv_dark_blue, $cv_light_blue);
 }
 
 
