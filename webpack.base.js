@@ -1,10 +1,9 @@
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
+const webpack = require('webpack');
 
-module.exports = {
-    entry: './src/client/scss/main.scss',
+const config = {
 
     module: {
-
         rules: [
             {
                 test: /\.js?$/,
@@ -19,5 +18,15 @@ module.exports = {
                 }
             }
         ]
-    }
+    },
+    plugins: [
+        new webpack.DefinePlugin({
+            'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
+        }),]
 }
+
+if (process.env.NODE_ENV !== 'production') {
+    config.devtool = 'inline-source-map'
+}
+
+module.exports = config;

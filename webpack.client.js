@@ -6,8 +6,6 @@ var WebpackIsomorphicToolsPlugin = require('webpack-isomorphic-tools/plugin')
 var webpackIsomorphicToolsPlugin = new WebpackIsomorphicToolsPlugin(require('./isomorphic.config'));
 
 const config = {
-    devtool: 'cheap-eval-source-map',
-    // tell webpack the root directory of our application
     entry: {
         main: ['./src/client/index.js', './src/client/scss/main.scss']
     },
@@ -19,8 +17,6 @@ const config = {
             { test: webpackIsomorphicToolsPlugin.regular_expression('images'), loader: 'url-loader', options: { limit: 10240 } }
         ]
     },
-
-    // tell webpack where to put the generated output file
     output: {
         filename: 'bundle.js',
         path: path.resolve(__dirname, 'public')
