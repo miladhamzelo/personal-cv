@@ -4,12 +4,12 @@
   "description": "shane arthur personal resume in react with SSR",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --config webpack.server.js -p && webpack --config webpack.client.js -p",
+    "build": "NODE_ENV=production webpack --config webpack.server.js -p && NODE_ENV=production webpack --config webpack.client.js -p",
     "start": "node build/bundle.js",
     "dev": "npm-run-all --parallel dev:*",
     "dev:server": "nodemon --watch build --exec \"node build/bundle.js\"",
-    "dev:build-server": "webpack --config webpack.server.js --watch",
-    "dev:build-client": "webpack --config webpack.client.js --watch"
+    "dev:build-server": "NODE_ENV=development webpack --config webpack.server.js --watch",
+    "dev:build-client": "NODE_ENV=development webpack --config webpack.client.js --watch"
   },
 
   "engines": {
