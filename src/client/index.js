@@ -22,7 +22,7 @@ ReactDOM.hydrate(
     <MuiThemeProvider>
     <Provider store={store}>
         <BrowserRouter>
-            <div> {renderRoutes(Routes)}</div>
+            <div>{renderRoutes(Routes)}</div>
         </BrowserRouter>
     </Provider>
     </MuiThemeProvider>,

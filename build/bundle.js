@@ -324,7 +324,7 @@ var _ssrHandler = __webpack_require__(68);
 
 var _ssrHandler2 = _interopRequireDefault(_ssrHandler);
 
-var _createStore = __webpack_require__(73);
+var _createStore = __webpack_require__(75);
 
 var _createStore2 = _interopRequireDefault(_createStore);
 
@@ -2170,22 +2170,42 @@ var _serializeJavascript2 = _interopRequireDefault(_serializeJavascript);
 
 var _reactHelmet = __webpack_require__(14);
 
-var _MuiThemeProvider = __webpack_require__(72);
+var _getMuiTheme = __webpack_require__(72);
+
+var _getMuiTheme2 = _interopRequireDefault(_getMuiTheme);
+
+var _MuiThemeProvider = __webpack_require__(73);
 
 var _MuiThemeProvider2 = _interopRequireDefault(_MuiThemeProvider);
 
+var _colors = __webpack_require__(74);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-exports.default = function (path, store, context) {
+exports.default = function (req, store, context) {
+
+    var muiTheme = (0, _getMuiTheme2.default)({
+        palette: {
+            primary1Color: _colors.green500,
+            primary2Color: _colors.green700,
+            primary3Color: _colors.green100
+        }
+    }, {
+        avatar: {
+            borderColor: null
+        },
+        userAgent: req.headers['user-agent'] || 'all'
+    });
+
     var content = (0, _server.renderToString)(_react2.default.createElement(
         _MuiThemeProvider2.default,
-        null,
+        { muiTheme: muiTheme },
         _react2.default.createElement(
             _reactRedux.Provider,
             { store: store },
             _react2.default.createElement(
                 _reactRouterDom.StaticRouter,
-                { location: path, context: context },
+                { location: req.url, context: context },
                 _react2.default.createElement(
                     'div',
                     null,
@@ -2222,10 +2242,22 @@ module.exports = require("serialize-javascript");
 /* 72 */
 /***/ (function(module, exports) {
 
-module.exports = require("material-ui/styles/MuiThemeProvider");
+module.exports = require("material-ui/styles/getMuiTheme");
 
 /***/ }),
 /* 73 */
+/***/ (function(module, exports) {
+
+module.exports = require("material-ui/styles/MuiThemeProvider");
+
+/***/ }),
+/* 74 */
+/***/ (function(module, exports) {
+
+module.exports = require("material-ui/styles/colors");
+
+/***/ }),
+/* 75 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2237,15 +2269,15 @@ Object.defineProperty(exports, "__esModule", {
 
 var _redux = __webpack_require__(2);
 
-var _reduxThunk = __webpack_require__(74);
+var _reduxThunk = __webpack_require__(76);
 
 var _reduxThunk2 = _interopRequireDefault(_reduxThunk);
 
-var _reducers = __webpack_require__(75);
+var _reducers = __webpack_require__(77);
 
 var _reducers2 = _interopRequireDefault(_reducers);
 
-var _axios = __webpack_require__(79);
+var _axios = __webpack_require__(81);
 
 var _axios2 = _interopRequireDefault(_axios);
 
@@ -2266,13 +2298,13 @@ exports.default = function (req) {
 };
 
 /***/ }),
-/* 74 */
+/* 76 */
 /***/ (function(module, exports) {
 
 module.exports = require("redux-thunk");
 
 /***/ }),
-/* 75 */
+/* 77 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2282,7 +2314,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _reducer = __webpack_require__(76);
+var _reducer = __webpack_require__(78);
 
 var _reducer2 = _interopRequireDefault(_reducer);
 
@@ -2307,7 +2339,7 @@ var rootReducer = combineReducers({
 exports.default = rootReducer;
 
 /***/ }),
-/* 76 */
+/* 78 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2321,9 +2353,9 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 
 exports.default = reducer;
 
-var _initialState = __webpack_require__(77);
+var _initialState = __webpack_require__(79);
 
-var _stateUtils = __webpack_require__(78);
+var _stateUtils = __webpack_require__(80);
 
 var _actionTypes = __webpack_require__(13);
 
@@ -2382,7 +2414,7 @@ function reducer() {
 }
 
 /***/ }),
-/* 77 */
+/* 79 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2517,7 +2549,7 @@ var initialState = exports.initialState = {
 };
 
 /***/ }),
-/* 78 */
+/* 80 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2554,7 +2586,7 @@ var stateUtils = exports.stateUtils = {
 };
 
 /***/ }),
-/* 79 */
+/* 81 */
 /***/ (function(module, exports) {
 
 module.exports = require("axios");
